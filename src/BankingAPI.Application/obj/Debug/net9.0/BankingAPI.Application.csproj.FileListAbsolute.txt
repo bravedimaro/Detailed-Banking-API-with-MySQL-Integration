@@ -13,3 +13,4 @@ C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integrat
 C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Application\obj\Debug\net9.0\refint\BankingAPI.Application.dll
 C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Application\obj\Debug\net9.0\BankingAPI.Application.pdb
 C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Application\obj\Debug\net9.0\ref\BankingAPI.Application.dll
+C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Application\obj\Debug\net9.0\BankingAPI.Application.sourcelink.json

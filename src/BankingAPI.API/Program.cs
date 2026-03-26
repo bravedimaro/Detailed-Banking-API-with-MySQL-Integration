@@ -10,6 +10,16 @@ using Microsoft.OpenApi;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// ── Startup validation — fail fast if required config is missing ──────────────
+var requiredConfig = new[] { "ConnectionStrings:DefaultConnection", "Jwt:Key" };
+foreach (var key in requiredConfig)
+{
+    if (string.IsNullOrWhiteSpace(builder.Configuration[key]))
+        throw new InvalidOperationException(
+            $"Required configuration '{key}' is missing. " +
+            $"Set it via environment variable '{key.Replace(":", "__")}' or appsettings.");
+}
+
 // Application & Infrastructure layers
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
@@ -38,6 +48,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
+    c.EnableAnnotations();
     c.SwaggerDoc("v1", new OpenApiInfo
     {
         Title = "Banking API",

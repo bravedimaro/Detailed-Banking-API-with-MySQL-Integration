@@ -123,3 +123,4 @@ C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integrat
 C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\tests\BankingAPI.Application.Tests\obj\Debug\net9.0\BankingAPI.Application.Tests.pdb
 C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\tests\BankingAPI.Application.Tests\obj\Debug\net9.0\BankingAPI.Application.Tests.genruntimeconfig.cache
 C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\tests\BankingAPI.Application.Tests\obj\Debug\net9.0\ref\BankingAPI.Application.Tests.dll
+C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\tests\BankingAPI.Application.Tests\obj\Debug\net9.0\BankingAPI.Application.Tests.sourcelink.json

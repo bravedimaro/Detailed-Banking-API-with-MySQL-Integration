@@ -10,3 +10,4 @@ C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integrat
 C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Domain\obj\Debug\net9.0\refint\BankingAPI.Domain.dll
 C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Domain\obj\Debug\net9.0\BankingAPI.Domain.pdb
 C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Domain\obj\Debug\net9.0\ref\BankingAPI.Domain.dll
+C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Domain\obj\Debug\net9.0\BankingAPI.Domain.sourcelink.json

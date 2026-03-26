@@ -13,7 +13,8 @@
           "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.4",
           "Microsoft.AspNetCore.OpenApi": "9.0.8",
           "Microsoft.EntityFrameworkCore.Design": "9.0.4",
-          "Swashbuckle.AspNetCore": "10.1.7"
+          "Swashbuckle.AspNetCore": "10.1.7",
+          "Swashbuckle.AspNetCore.Annotations": "10.1.7"
         },
         "runtime": {
           "BankingAPI.API.dll": {}
@@ -697,6 +698,17 @@
           "Swashbuckle.AspNetCore.SwaggerUI": "10.1.7"
         }
       },
+      "Swashbuckle.AspNetCore.Annotations/10.1.7": {
+        "dependencies": {
+          "Swashbuckle.AspNetCore.SwaggerGen": "10.1.7"
+        },
+        "runtime": {
+          "lib/net9.0/Swashbuckle.AspNetCore.Annotations.dll": {
+            "assemblyVersion": "10.1.7.0",
+            "fileVersion": "10.1.7.2427"
+          }
+        }
+      },
       "Swashbuckle.AspNetCore.Swagger/10.1.7": {
         "dependencies": {
           "Microsoft.OpenApi": "2.4.1"
@@ -1191,6 +1203,13 @@
       "sha512": "sha512-vgef8DPT411JU5JjHiDbr0WOxsIVuAvegPGtqmm4Na4JRl/264dfBJcGkiPHsAr5P+Vda+qN1rZKRtBl1rF9aA==",
       "path": "swashbuckle.aspnetcore/10.1.7",
       "hashPath": "swashbuckle.aspnetcore.10.1.7.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.Annotations/10.1.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qHNQghKAzrjDEECIlyKEanmWxXDzrh6PyjGWVdql2qZfap0Ionuxam5OrUozibjbgQbVjRmgSXxWC8giIuCbGA==",
+      "path": "swashbuckle.aspnetcore.annotations/10.1.7",
+      "hashPath": "swashbuckle.aspnetcore.annotations.10.1.7.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore.Swagger/10.1.7": {
       "type": "package",

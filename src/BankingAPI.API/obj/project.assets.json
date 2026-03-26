@@ -956,6 +956,22 @@
           "buildMultiTargeting/Swashbuckle.AspNetCore.props": {}
         }
       },
+      "Swashbuckle.AspNetCore.Annotations/10.1.7": {
+        "type": "package",
+        "dependencies": {
+          "Swashbuckle.AspNetCore.SwaggerGen": "10.1.7"
+        },
+        "compile": {
+          "lib/net9.0/Swashbuckle.AspNetCore.Annotations.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Swashbuckle.AspNetCore.Annotations.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Swashbuckle.AspNetCore.Swagger/10.1.7": {
         "type": "package",
         "dependencies": {
@@ -3389,6 +3405,27 @@
         "swashbuckle.aspnetcore.nuspec"
       ]
     },
+    "Swashbuckle.AspNetCore.Annotations/10.1.7": {
+      "sha512": "qHNQghKAzrjDEECIlyKEanmWxXDzrh6PyjGWVdql2qZfap0Ionuxam5OrUozibjbgQbVjRmgSXxWC8giIuCbGA==",
+      "type": "package",
+      "path": "swashbuckle.aspnetcore.annotations/10.1.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net10.0/Swashbuckle.AspNetCore.Annotations.dll",
+        "lib/net10.0/Swashbuckle.AspNetCore.Annotations.pdb",
+        "lib/net10.0/Swashbuckle.AspNetCore.Annotations.xml",
+        "lib/net8.0/Swashbuckle.AspNetCore.Annotations.dll",
+        "lib/net8.0/Swashbuckle.AspNetCore.Annotations.pdb",
+        "lib/net8.0/Swashbuckle.AspNetCore.Annotations.xml",
+        "lib/net9.0/Swashbuckle.AspNetCore.Annotations.dll",
+        "lib/net9.0/Swashbuckle.AspNetCore.Annotations.pdb",
+        "lib/net9.0/Swashbuckle.AspNetCore.Annotations.xml",
+        "package-readme.md",
+        "swashbuckle.aspnetcore.annotations.10.1.7.nupkg.sha512",
+        "swashbuckle.aspnetcore.annotations.nuspec"
+      ]
+    },
     "Swashbuckle.AspNetCore.Swagger/10.1.7": {
       "sha512": "EjLibt/d/QuRv170GoihTbcPUpgzSFm2WKHhnGJFZQ03JYzfuitsM79azaAR8NBwRunU7yScSX6HRE5JUlrEMQ==",
       "type": "package",
@@ -3914,7 +3951,8 @@
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 9.0.4",
       "Microsoft.AspNetCore.OpenApi >= 9.0.8",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.4",
-      "Swashbuckle.AspNetCore >= 10.1.7"
+      "Swashbuckle.AspNetCore >= 10.1.7",
+      "Swashbuckle.AspNetCore.Annotations >= 10.1.7"
     ]
   },
   "packageFolders": {
@@ -3990,6 +4028,10 @@
             "version": "[9.0.4, )"
           },
           "Swashbuckle.AspNetCore": {
+            "target": "Package",
+            "version": "[10.1.7, )"
+          },
+          "Swashbuckle.AspNetCore.Annotations": {
             "target": "Package",
             "version": "[10.1.7, )"
           }
