@@ -1,8 +1,7 @@
 using BankingAPI.Application.Interfaces;
 using BankingAPI.Infrastructure.Persistence;
 using BankingAPI.Infrastructure.Repositories;
-using BankingAPI.Infrastructure.Services;
-using Microsoft.EntityFrameworkCore;
+using BankingAPI.Infrastructure.Services;using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -21,6 +20,7 @@ public static class DependencyInjection
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IAccountRepository, AccountRepository>();
         services.AddScoped<ITransactionRepository, TransactionRepository>();
+        services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
         services.AddScoped<IJwtService, JwtService>();
 
         return services;

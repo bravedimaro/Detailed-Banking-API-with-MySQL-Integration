@@ -10,7 +10,6 @@ public record GetAccountQuery(Guid UserId) : IRequest<AccountResponse>;
 public class GetAccountQueryHandler : IRequestHandler<GetAccountQuery, AccountResponse>
 {
     private readonly IAccountRepository _accounts;
-
     public GetAccountQueryHandler(IAccountRepository accounts) => _accounts = accounts;
 
     public async Task<AccountResponse> Handle(GetAccountQuery request, CancellationToken ct)
@@ -18,6 +17,6 @@ public class GetAccountQueryHandler : IRequestHandler<GetAccountQuery, AccountRe
         var account = await _accounts.GetByUserIdAsync(request.UserId, ct)
             ?? throw new NotFoundException(nameof(Domain.Entities.Account), request.UserId);
 
-        return new AccountResponse(account.Id, account.AccountNumber, account.Balance, account.CreatedAt, account.UpdatedAt);
+        return new AccountResponse(account.AccountNumber, account.Balance, account.CreatedAt, account.UpdatedAt);
     }
 }

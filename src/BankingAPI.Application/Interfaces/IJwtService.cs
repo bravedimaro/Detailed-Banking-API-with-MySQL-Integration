@@ -1,8 +1,11 @@
+using BankingAPI.Application.DTOs;
 using BankingAPI.Domain.Entities;
 
 namespace BankingAPI.Application.Interfaces;
 
 public interface IJwtService
 {
-    string GenerateToken(User user);
+    string GenerateAccessToken(User user);
+    string GenerateRefreshToken();
+    DateTime AccessTokenExpiresAt { get; }
 }

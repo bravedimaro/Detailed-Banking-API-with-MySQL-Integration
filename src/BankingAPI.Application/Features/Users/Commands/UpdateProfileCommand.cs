@@ -1,13 +1,12 @@
-using BankingAPI.Application.DTOs;
 using BankingAPI.Application.Interfaces;
 using BankingAPI.Domain.Exceptions;
 using MediatR;
 
 namespace BankingAPI.Application.Features.Users.Commands;
 
-public record UpdateProfileCommand(Guid UserId, string? FullName, string? PhoneNumber, string? Address) : IRequest<UserProfileResponse>;
+public record UpdateProfileCommand(Guid UserId, string? FullName, string? PhoneNumber, string? Address) : IRequest;
 
-public class UpdateProfileCommandHandler : IRequestHandler<UpdateProfileCommand, UserProfileResponse>
+public class UpdateProfileCommandHandler : IRequestHandler<UpdateProfileCommand>
 {
     private readonly IUserRepository _users;
     private readonly IUnitOfWork _uow;
@@ -18,7 +17,7 @@ public class UpdateProfileCommandHandler : IRequestHandler<UpdateProfileCommand,
         _uow = uow;
     }
 
-    public async Task<UserProfileResponse> Handle(UpdateProfileCommand request, CancellationToken ct)
+    public async Task Handle(UpdateProfileCommand request, CancellationToken ct)
     {
         var user = await _users.GetByIdAsync(request.UserId, ct)
             ?? throw new NotFoundException(nameof(Domain.Entities.User), request.UserId);
@@ -29,7 +28,5 @@ public class UpdateProfileCommandHandler : IRequestHandler<UpdateProfileCommand,
 
         await _users.UpdateAsync(user, ct);
         await _uow.SaveChangesAsync(ct);
-
-        return new UserProfileResponse(user.Id, user.FullName, user.Email, user.PhoneNumber, user.Address, user.CreatedAt);
     }
 }

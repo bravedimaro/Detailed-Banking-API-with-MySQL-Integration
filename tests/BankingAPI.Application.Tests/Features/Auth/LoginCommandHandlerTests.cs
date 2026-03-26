@@ -10,18 +10,20 @@ namespace BankingAPI.Application.Tests.Features.Auth;
 public class LoginCommandHandlerTests
 {
     private readonly Mock<IUserRepository> _users = new();
+    private readonly Mock<IRefreshTokenRepository> _refreshTokens = new();
     private readonly Mock<IJwtService> _jwt = new();
+    private readonly Mock<IUnitOfWork> _uow = new();
     private readonly LoginCommandHandler _handler;
 
     public LoginCommandHandlerTests()
     {
-        _handler = new LoginCommandHandler(_users.Object, _jwt.Object);
+        _handler = new LoginCommandHandler(_users.Object, _refreshTokens.Object, _jwt.Object, _uow.Object);
+        _jwt.Setup(j => j.AccessTokenExpiresAt).Returns(DateTime.UtcNow.AddMinutes(15));
     }
 
     [Fact]
-    public async Task Handle_ValidCredentials_ReturnsAuthResponse()
+    public async Task Handle_ValidCredentials_ReturnsLoginResponse()
     {
-        // Arrange
         var user = new User
         {
             Id = Guid.NewGuid(),
@@ -31,14 +33,15 @@ public class LoginCommandHandlerTests
         };
 
         _users.Setup(r => r.GetByEmailAsync("john@example.com", default)).ReturnsAsync(user);
-        _jwt.Setup(j => j.GenerateToken(user)).Returns("jwt-token");
+        _jwt.Setup(j => j.GenerateAccessToken(user)).Returns("access-token");
+        _jwt.Setup(j => j.GenerateRefreshToken()).Returns("refresh-token");
 
-        // Act
         var result = await _handler.Handle(new LoginCommand("john@example.com", "Password1"), default);
 
-        // Assert
-        result.Token.Should().Be("jwt-token");
-        result.Email.Should().Be("john@example.com");
+        result.AccessToken.Should().Be("access-token");
+        result.RefreshToken.Should().Be("refresh-token");
+        _refreshTokens.Verify(r => r.AddAsync(It.IsAny<RefreshToken>(), default), Times.Once);
+        _uow.Verify(u => u.SaveChangesAsync(default), Times.Once);
     }
 
     [Fact]

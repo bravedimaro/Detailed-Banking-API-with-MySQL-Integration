@@ -1,4 +1,5 @@
 using BankingAPI.API.Extensions;
+using BankingAPI.Application.Common;
 using BankingAPI.Application.DTOs;
 using BankingAPI.Application.Features.Users.Commands;
 using BankingAPI.Application.Features.Users.Queries;
@@ -24,14 +25,14 @@ public class UsersController : ControllerBase
     [HttpGet("me")]
     [SwaggerOperation(
         Summary = "Get current user profile",
-        Description = "Returns the full profile of the currently authenticated user, including contact details and registration date.")]
-    [SwaggerResponse(200, "Profile retrieved successfully", typeof(UserProfileResponse))]
-    [SwaggerResponse(401, "Authentication required")]
-    [SwaggerResponse(404, "User not found")]
+        Description = "Returns the profile of the currently authenticated user. User ID is not exposed.")]
+    [SwaggerResponse(200, "Profile retrieved successfully", typeof(ApiResponse<UserProfileResponse>))]
+    [SwaggerResponse(401, "Authentication required", typeof(ApiResponse<object>))]
+    [SwaggerResponse(404, "User not found", typeof(ApiResponse<object>))]
     public async Task<IActionResult> GetProfile(CancellationToken ct)
     {
         var result = await _mediator.Send(new GetProfileQuery(User.GetUserId()), ct);
-        return Ok(result);
+        return Ok(ApiResponse<UserProfileResponse>.Success(result, "Profile retrieved successfully."));
     }
 
     [HttpPut("me")]
@@ -39,20 +40,17 @@ public class UsersController : ControllerBase
         Summary = "Update current user profile",
         Description = @"Updates the contact information of the currently authenticated user.
 
-**Updatable fields:**
-- `fullName` — Display name (max 100 characters)
-- `phoneNumber` — Contact phone number
-- `address` — Mailing address
+**Updatable fields:** `fullName`, `phoneNumber`, `address`
 
 **Note:** Email address cannot be changed after registration.")]
-    [SwaggerResponse(200, "Profile updated successfully", typeof(UserProfileResponse))]
-    [SwaggerResponse(400, "Validation failed")]
-    [SwaggerResponse(401, "Authentication required")]
-    [SwaggerResponse(404, "User not found")]
+    [SwaggerResponse(200, "Profile updated successfully", typeof(ApiResponse<object>))]
+    [SwaggerResponse(400, "Validation failed", typeof(ApiResponse<object>))]
+    [SwaggerResponse(401, "Authentication required", typeof(ApiResponse<object>))]
+    [SwaggerResponse(404, "User not found", typeof(ApiResponse<object>))]
     public async Task<IActionResult> UpdateProfile([FromBody] UpdateProfileRequest request, CancellationToken ct)
     {
-        var result = await _mediator.Send(
+        await _mediator.Send(
             new UpdateProfileCommand(User.GetUserId(), request.FullName, request.PhoneNumber, request.Address), ct);
-        return Ok(result);
+        return Ok(ApiResponse<object>.Success("Profile updated successfully."));
     }
 }

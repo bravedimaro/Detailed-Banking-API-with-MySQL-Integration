@@ -1,7 +1,7 @@
 namespace BankingAPI.Application.DTOs;
 
+// No Id exposed
 public record AccountResponse(
-    Guid Id,
     string AccountNumber,
     decimal Balance,
     DateTime CreatedAt,

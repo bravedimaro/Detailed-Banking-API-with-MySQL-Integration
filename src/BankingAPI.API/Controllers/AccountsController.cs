@@ -1,4 +1,5 @@
 using BankingAPI.API.Extensions;
+using BankingAPI.Application.Common;
 using BankingAPI.Application.DTOs;
 using BankingAPI.Application.Features.Accounts.Queries;
 using MediatR;
@@ -23,19 +24,13 @@ public class AccountsController : ControllerBase
     [HttpGet("me")]
     [SwaggerOperation(
         Summary = "Get account details",
-        Description = @"Returns the bank account linked to the currently authenticated user.
-
-**Response includes:**
-- `accountNumber` — The unique account number assigned at registration
-- `balance` — Current available balance (2 decimal places)
-- `createdAt` / `updatedAt` — Account creation and last-modified timestamps")]
-    [SwaggerResponse(200, "Account details retrieved", typeof(AccountResponse))]
-    [SwaggerResponse(401, "Authentication required")]
-    [SwaggerResponse(404, "Account not found for this user")]
+        Description = "Returns the bank account linked to the currently authenticated user. Account ID is not exposed.")]
+    [SwaggerResponse(200, "Account details retrieved", typeof(ApiResponse<AccountResponse>))]
+    [SwaggerResponse(401, "Authentication required", typeof(ApiResponse<object>))]
+    [SwaggerResponse(404, "Account not found", typeof(ApiResponse<object>))]
     public async Task<IActionResult> GetMyAccount(CancellationToken ct)
     {
-        var userId = User.GetUserId();
-        var result = await _mediator.Send(new GetAccountQuery(userId), ct);
-        return Ok(result);
+        var result = await _mediator.Send(new GetAccountQuery(User.GetUserId()), ct);
+        return Ok(ApiResponse<AccountResponse>.Success(result, "Account details retrieved successfully."));
     }
 }

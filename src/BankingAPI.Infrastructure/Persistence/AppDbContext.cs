@@ -11,6 +11,7 @@ public class AppDbContext : DbContext, IUnitOfWork
     public DbSet<User> Users => Set<User>();
     public DbSet<Account> Accounts => Set<Account>();
     public DbSet<Transaction> Transactions => Set<Transaction>();
+    public DbSet<RefreshToken> RefreshTokens => Set<RefreshToken>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -48,6 +49,17 @@ public class AppDbContext : DbContext, IUnitOfWork
              .WithMany(a => a.ReceivedTransactions)
              .HasForeignKey(t => t.ReceiverAccountId)
              .OnDelete(DeleteBehavior.Restrict);
+        });
+
+        modelBuilder.Entity<RefreshToken>(e =>
+        {
+            e.HasKey(r => r.Id);
+            e.HasIndex(r => r.Token).IsUnique();
+            e.Property(r => r.Token).IsRequired();
+            e.HasOne(r => r.User)
+             .WithMany(u => u.RefreshTokens)
+             .HasForeignKey(r => r.UserId)
+             .OnDelete(DeleteBehavior.Cascade);
         });
     }
 
