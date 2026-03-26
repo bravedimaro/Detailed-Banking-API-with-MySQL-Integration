@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "iU9LIaQFB8c=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\brave\\source\\repos\\Banking_API\\Detailed-Banking-API-with-MySQL-Integration\\src\\BankingAPI.Domain\\BankingAPI.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\brave\\.nuget\\packages\\fluentvalidation\\12.1.1\\fluentvalidation.12.1.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BankingAPI.API</name>
+    </assembly>
+    <members>
+        <member name="T:BankingAPI.API.Controllers.AccountsController">
+            <summary>Account management endpoints</summary>
+        </member>
+        <member name="M:BankingAPI.API.Controllers.AccountsController.GetMyAccount(System.Threading.CancellationToken)">
+            <summary>Get the authenticated user's account details and balance</summary>
+        </member>
+        <member name="T:BankingAPI.API.Controllers.AuthController">
+            <summary>Authentication endpoints</summary>
+        </member>
+        <member name="M:BankingAPI.API.Controllers.AuthController.Register(BankingAPI.Application.DTOs.RegisterRequest,System.Threading.CancellationToken)">
+            <summary>Register a new user</summary>
+        </member>
+        <member name="M:BankingAPI.API.Controllers.AuthController.Login(BankingAPI.Application.DTOs.LoginRequest,System.Threading.CancellationToken)">
+            <summary>Login and receive a JWT token</summary>
+        </member>
+        <member name="T:BankingAPI.API.Controllers.TransactionsController">
+            <summary>Fund transfer and transaction history endpoints</summary>
+        </member>
+        <member name="M:BankingAPI.API.Controllers.TransactionsController.Transfer(BankingAPI.Application.DTOs.TransferRequest,System.Threading.CancellationToken)">
+            <summary>Transfer funds to another account</summary>
+        </member>
+        <member name="M:BankingAPI.API.Controllers.TransactionsController.GetHistory(System.Threading.CancellationToken)">
+            <summary>Get the authenticated user's transaction history</summary>
+        </member>
+        <member name="T:BankingAPI.API.Controllers.UsersController">
+            <summary>User profile endpoints</summary>
+        </member>
+        <member name="M:BankingAPI.API.Controllers.UsersController.GetProfile(System.Threading.CancellationToken)">
+            <summary>Get the authenticated user's profile</summary>
+        </member>
+        <member name="M:BankingAPI.API.Controllers.UsersController.UpdateProfile(BankingAPI.Application.DTOs.UpdateProfileRequest,System.Threading.CancellationToken)">
+            <summary>Update the authenticated user's profile</summary>
+        </member>
+    </members>
+</doc>
