@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BankingAPI.API</name>
+    </assembly>
+    <members>
+        <member name="T:BankingAPI.API.Controllers.AccountsController">
+            <summary>
+            Bank account details and balance enquiry
+            </summary>
+        </member>
+        <member name="T:BankingAPI.API.Controllers.AuthController">
+            <summary>
+            User registration and authentication operations
+            </summary>
+        </member>
+        <member name="T:BankingAPI.API.Controllers.TransactionsController">
+            <summary>
+            Fund transfers and transaction history
+            </summary>
+        </member>
+        <member name="T:BankingAPI.API.Controllers.UsersController">
+            <summary>
+            Authenticated user profile management
+            </summary>
+        </member>
+    </members>
+</doc>

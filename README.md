@@ -105,6 +105,24 @@ Swagger UI: `http://localhost:5000/swagger`
 dotnet test
 ```
 
+### Test Results
+
+Last run: **9 passed, 0 failed** — `dotnet test BankingAPI.sln` (xUnit.net v2.8.2, .NET 9.0)
+
+| # | Test | Suite | Result | Duration |
+|---|------|-------|--------|----------|
+| 1 | `Handle_ValidRequest_ReturnsAuthResponse` | `RegisterCommandHandlerTests` | ✅ Passed | 714 ms |
+| 2 | `Handle_DuplicateEmail_ThrowsDuplicateEmailException` | `RegisterCommandHandlerTests` | ✅ Passed | 1 s |
+| 3 | `Handle_ValidCredentials_ReturnsAuthResponse` | `LoginCommandHandlerTests` | ✅ Passed | 2 s |
+| 4 | `Handle_UserNotFound_ThrowsNotFoundException` | `LoginCommandHandlerTests` | ✅ Passed | 4 ms |
+| 5 | `Handle_WrongPassword_ThrowsDomainException` | `LoginCommandHandlerTests` | ✅ Passed | 585 ms |
+| 6 | `Handle_ValidTransfer_UpdatesBalancesAndLogsTransaction` | `TransferCommandHandlerTests` | ✅ Passed | 20 ms |
+| 7 | `Handle_InsufficientFunds_ThrowsInsufficientFundsException` | `TransferCommandHandlerTests` | ✅ Passed | 4 ms |
+| 8 | `Handle_ZeroAmount_ThrowsDomainException` | `TransferCommandHandlerTests` | ✅ Passed | 1 s |
+| 9 | `Handle_SameAccount_ThrowsDomainException` | `TransferCommandHandlerTests` | ✅ Passed | 30 ms |
+
+**Total duration:** 9.06 s
+
 ## Security
 
 - Passwords hashed with BCrypt (work factor 11)

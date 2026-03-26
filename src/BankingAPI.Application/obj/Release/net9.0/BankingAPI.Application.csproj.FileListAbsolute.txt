@@ -1,0 +1,16 @@
+C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Application\bin\Release\net9.0\BankingAPI.Application.deps.json
+C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Application\bin\Release\net9.0\BankingAPI.Application.dll
+C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Application\bin\Release\net9.0\BankingAPI.Application.pdb
+C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Application\bin\Release\net9.0\BankingAPI.Domain.dll
+C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Application\bin\Release\net9.0\BankingAPI.Domain.pdb
+C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Application\obj\Release\net9.0\BankingAPI.Application.csproj.AssemblyReference.cache
+C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Application\obj\Release\net9.0\BankingAPI.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Application\obj\Release\net9.0\BankingAPI.Application.AssemblyInfoInputs.cache
+C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Application\obj\Release\net9.0\BankingAPI.Application.AssemblyInfo.cs
+C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Application\obj\Release\net9.0\BankingAPI.Application.csproj.CoreCompileInputs.cache
+C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Application\obj\Release\net9.0\BankingAPI.Application.sourcelink.json
+C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Application\obj\Release\net9.0\BankingA.D190D247.Up2Date
+C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Application\obj\Release\net9.0\BankingAPI.Application.dll
+C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Application\obj\Release\net9.0\refint\BankingAPI.Application.dll
+C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Application\obj\Release\net9.0\BankingAPI.Application.pdb
+C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Application\obj\Release\net9.0\ref\BankingAPI.Application.dll

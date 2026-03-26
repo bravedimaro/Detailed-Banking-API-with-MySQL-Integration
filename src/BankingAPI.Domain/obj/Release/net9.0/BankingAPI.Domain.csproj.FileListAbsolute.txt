@@ -1,0 +1,13 @@
+C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Domain\bin\Release\net9.0\BankingAPI.Domain.deps.json
+C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Domain\bin\Release\net9.0\BankingAPI.Domain.dll
+C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Domain\bin\Release\net9.0\BankingAPI.Domain.pdb
+C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Domain\obj\Release\net9.0\BankingAPI.Domain.csproj.AssemblyReference.cache
+C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Domain\obj\Release\net9.0\BankingAPI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Domain\obj\Release\net9.0\BankingAPI.Domain.AssemblyInfoInputs.cache
+C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Domain\obj\Release\net9.0\BankingAPI.Domain.AssemblyInfo.cs
+C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Domain\obj\Release\net9.0\BankingAPI.Domain.csproj.CoreCompileInputs.cache
+C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Domain\obj\Release\net9.0\BankingAPI.Domain.sourcelink.json
+C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Domain\obj\Release\net9.0\BankingAPI.Domain.dll
+C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Domain\obj\Release\net9.0\refint\BankingAPI.Domain.dll
+C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Domain\obj\Release\net9.0\BankingAPI.Domain.pdb
+C:\Users\brave\source\repos\Banking_API\Detailed-Banking-API-with-MySQL-Integration\src\BankingAPI.Domain\obj\Release\net9.0\ref\BankingAPI.Domain.dll
